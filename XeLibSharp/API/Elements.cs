@@ -264,10 +264,10 @@ namespace XeLib.API
                 throw Helpers.GetException($"Failed to move array item {handle} to {index}");
         }
 
-        public static Handle CopyElement(Handle handleOne, Handle handleTwo, Boolean asNew = false)
+        public static Handle CopyElement(Handle src, Handle dstContainer, Boolean asNew = false)
         {
-            if (!Functions.CopyElement(handleOne, handleTwo, asNew, out var resHandle))
-                throw Helpers.GetException($"Failed to copy element {handleOne} to {handleTwo}");
+            if (!Functions.CopyElement(src, dstContainer, asNew, out var resHandle))
+                throw Helpers.GetException($"Failed to copy element {src} to {dstContainer}");
             return resHandle;
         }
 

@@ -159,15 +159,15 @@ namespace XeLib.API
             return resHandle;
         }
 
-        public static ConflictData GetConflictData(Handle handleOne, Handle handleTwo)
+        public static ConflictData GetConflictData(Handle nodes, Handle handle)
         {
-            return !Functions.GetConflictData(handleOne, handleTwo, out var resOne, out var resTwo) ? new ConflictData(0, 0) : new ConflictData(resOne, resTwo);
+            return !Functions.GetConflictData(nodes, handle, out var resOne, out var resTwo) ? new ConflictData(0, 0) : new ConflictData(resOne, resTwo);
         }
 
-        public static ConflictData GetConflictDataEx(Handle handleOne, Handle handleTwo)
+        public static ConflictData GetConflictDataEx(Handle nodes, Handle handle)
         {
-            if (!Functions.GetConflictData(handleOne, handleTwo, out var resOne, out var resTwo))
-                throw Helpers.GetException($"GetConflictData failed on {handleOne}, {handleTwo}");
+            if (!Functions.GetConflictData(nodes, handle, out var resOne, out var resTwo))
+                throw Helpers.GetException($"GetConflictData failed on {nodes}, {handle}");
 
             return new ConflictData(resOne, resTwo);
         }
@@ -185,10 +185,10 @@ namespace XeLib.API
             }
         }
 
-        public static Handle[] GetNodeElements(Handle handleOne, Handle handleTwo)
+        public static Handle[] GetNodeElements(Handle nodes, Handle handle)
         {
-            if (!Functions.GetNodeElements(handleOne, handleTwo, out var len))
-                throw Helpers.GetException($"GetNodeElements failed on {handleOne}, {handleTwo}");
+            if (!Functions.GetNodeElements(nodes, handle, out var len))
+                throw Helpers.GetException($"GetNodeElements failed on {nodes}, {handle}");
             return Helpers.GetHandleArray(len);
         }
 

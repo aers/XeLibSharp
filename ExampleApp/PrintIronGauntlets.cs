@@ -9,9 +9,10 @@ namespace ExampleApp
         private static void PrintNodes(Handle baseHandle, HandleGroup g)
         {
             var defNames = Elements.GetDefNames(baseHandle);
-            var virtualNodes = g.AddHandle(Records.GetNodes(baseHandle));
+            var virtualNodes = Records.GetNodes(baseHandle);
             var elementArray = g.AddHandles(Records.GetNodeElements(virtualNodes, baseHandle));
             PrintStructNodes(virtualNodes, 0, defNames, elementArray, g);
+            Meta.ReleaseNodes(virtualNodes);
         }
 
         private static void PrintStructNodes(Handle virtualNodes, Int32 depth, String[] defNames, Handle[] elementArray, HandleGroup g)

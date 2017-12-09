@@ -24,10 +24,10 @@ namespace XeLib.API
                 throw Helpers.GetException($"Failed to add master {filename} to file {handle}");
         }
 
-        public static void AddRequiredMasters(Handle handleOne, Handle handleTwo, Boolean asNew = false)
+        public static void AddRequiredMasters(Handle src, Handle file, Boolean asNew = false)
         {
-            if (!Functions.AddRequiredMasters(handleOne, handleTwo, asNew))
-                throw Helpers.GetException($"Failed to add required masters for {handleOne} to {handleTwo}");
+            if (!Functions.AddRequiredMasters(src, file, asNew))
+                throw Helpers.GetException($"Failed to add required masters for {src} to {file}");
         }
 
         public static Handle[] GetMasters(Handle handle)
