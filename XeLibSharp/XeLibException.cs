@@ -52,7 +52,7 @@ namespace XeLib
 
         public override String ToString()
         {
-            return base.ToString() + "\r\n" + XeditLibExceptionMessage;
+            return base.ToString() + "\r\nException returned from XEditLib:\r\n" + XeditLibExceptionMessage;
         }
     }
 }
