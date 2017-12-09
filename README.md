@@ -2,8 +2,9 @@
 Quick C# port of mator's Javascript wrapper [xelib](https://github.com/matortheeternal/xelib) for [xedit-lib](https://github.com/matortheeternal/xedit-lib) for my own use. Has all the same methods implemented.
 
 The original xelib throws exceptions when xedit-lib returns exceptions; this library does the same for now, but probably won't forever.
+
 ## Docs
-There's no documentation yet (possibly ever), but zedit has xedit docs [here](https://github.com/matortheeternal/zedit/tree/master/app/docs/development/apis/xelib) if you want more detail on what a specific method does.
+There's no documentation yet (possibly ever), but zedit has xelib docs [here](https://github.com/matortheeternal/zedit/tree/master/app/docs/development/apis/xelib) if you want more detail on what a specific method does.
 
 ## Usage
 
