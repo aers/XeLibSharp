@@ -63,7 +63,7 @@ namespace XeLib.API
 
         public static Int32 GetOverrideRecordCount(Handle handle)
         {
-            if (!Functions.GetOverrideRecountCount(handle, out var resInt))
+            if (!Functions.GetOverrideRecordCount(handle, out var resInt))
                 throw Helpers.GetException($"Failed to get override record count for ${handle}");
             return resInt;
         }
