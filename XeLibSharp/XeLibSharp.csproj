@@ -57,8 +57,19 @@
     <Compile Include="API\Setup.cs" />
     <Compile Include="Handle.cs" />
     <Compile Include="HandleGroup.cs" />
+    <Compile Include="Internal\Elements.cs" />
+    <Compile Include="Internal\Errors.cs" />
+    <Compile Include="Internal\Files.cs" />
     <Compile Include="Internal\Functions.cs" />
     <Compile Include="Internal\Helpers.cs" />
+    <Compile Include="Internal\Masters.cs" />
+    <Compile Include="Internal\Messages.cs" />
+    <Compile Include="Internal\Meta.cs" />
+    <Compile Include="Internal\PluginErrors.cs" />
+    <Compile Include="Internal\Records.cs" />
+    <Compile Include="Internal\Serialization.cs" />
+    <Compile Include="Internal\Setup.cs" />
+    <Compile Include="Internal\Values.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XeLibException.cs" />
   </ItemGroup>

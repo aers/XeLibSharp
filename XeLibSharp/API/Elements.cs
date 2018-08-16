@@ -290,9 +290,9 @@ namespace XeLib.API
             return resBool;
         }
 
-        public static String[] GetAllowedSignatures(Handle handle)
+        public static String[] GetSignaturesAllowed(Handle handle)
         {
-            if (!Functions.GetAllowedSignatures(handle, out var len))
+            if (!Functions.GetSignaturesAllowed(handle, out var len))
                 throw Helpers.GetException($"Failed to get allowed signatures for {handle}");
             return Helpers.GetResultStringArray(len);
         }
