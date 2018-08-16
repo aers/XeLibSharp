@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/aers/XeLibSharp/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/aers/XeLibSharp</projectUrl>
+    <iconUrl>http://puu.sh/s4Krc.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>xEdit</tags>
+  </metadata>
+
+  <files>
+    <file src="bin\Release\XEditLib.dll" target="lib\net472"/>
+  </files>
+</package>
