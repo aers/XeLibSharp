@@ -17,12 +17,12 @@ using XeLib.API;
 // Initialize XEditLib
 Meta.Initialize();
 // Set game mode to Skyrim SE
-Setup.SetGameMode(Setup.GameMode.GmSse);
+Setup.SetGameMode(Setup.GameMode.SSE);
 // Load plugins seperated by newlines
 Setup.LoadPlugins("Skyrim.esm\nUpdate.esm");
 // Wait on loader
 var state = Setup.GetLoaderStatus();
-while (state != Setup.LoaderState.IsDone && state != Setup.LoaderState.IsError)
+while (state != Setup.LoaderState.IsDone && state != Setup.LoaderState.HasError)
     state = Setup.GetLoaderStatus();
 
 // Get an element
