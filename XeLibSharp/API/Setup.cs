@@ -10,12 +10,12 @@ namespace XeLib.API
     {
         public enum GameMode
         {
-            GmFnv = 0,
-            GmF03 = 1,
-            GmTes4 = 2,
-            GmTes5 = 3,
-            GmSse = 4,
-            GmFo4 = 5
+            FNV = 0,
+            FO3 = 1,
+            TES4 = 2,
+            TES5 = 3,
+            SSE = 4,
+            FO4 = 5
         }
 
         public enum LoaderState : Byte
@@ -23,18 +23,18 @@ namespace XeLib.API
             IsInactive = 0,
             IsActive = 1,
             IsDone = 2,
-            IsError = 3
+            HasError = 3
         }
 
         public static readonly IList<GameInfo> Games = new ReadOnlyCollection<GameInfo>(
             new[]
             {
-                new GameInfo("Fallout NV", "FalloutNV", GameMode.GmFnv, "FalloutNV.exe"),
-                new GameInfo("Fallout 3", "Fallout3", GameMode.GmF03, "Fallout3.exe"),
-                new GameInfo("Oblivion", "Oblivion", GameMode.GmTes4, "Oblivion.exe"),
-                new GameInfo("Skyrim", "Skyrim", GameMode.GmTes5, "TESV.exe"),
-                new GameInfo("Skyrim SE", "Skyrim", GameMode.GmSse, "SkyrimSE.exe"),
-                new GameInfo("Fallout 4", "Fallout4", GameMode.GmFo4, "Fallout4.exe")
+                new GameInfo("Fallout NV", "FalloutNV", GameMode.FNV, "FalloutNV.exe"),
+                new GameInfo("Fallout 3", "Fallout3", GameMode.FO3, "Fallout3.exe"),
+                new GameInfo("Oblivion", "Oblivion", GameMode.TES4, "Oblivion.exe"),
+                new GameInfo("Skyrim", "Skyrim", GameMode.TES5, "TESV.exe"),
+                new GameInfo("Skyrim SE", "Skyrim", GameMode.SSE, "SkyrimSE.exe"),
+                new GameInfo("Fallout 4", "Fallout4", GameMode.FO4, "Fallout4.exe")
             });
 
         public static void SetGamePath(String gamePath)

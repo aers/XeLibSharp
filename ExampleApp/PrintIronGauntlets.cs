@@ -84,12 +84,12 @@ namespace ExampleApp
                 Console.WriteLine("Initializing XEditLib");
                 Meta.Initialize();
                 Console.WriteLine("Setting game mode to Skyrim SE");
-                Setup.SetGameMode(Setup.GameMode.GmSse);
+                Setup.SetGameMode(Setup.GameMode.SSE);
                 Console.WriteLine("Loading plugins Skyrim.esm & Update.esm");
                 Setup.LoadPlugins("Skyrim.esm\nUpdate.esm");
                 Console.WriteLine("Waiting for loader to finish");
                 var state = Setup.LoaderState.IsInactive;
-                while (state != Setup.LoaderState.IsDone && state != Setup.LoaderState.IsError)
+                while (state != Setup.LoaderState.IsDone && state != Setup.LoaderState.HasError)
                     state = Setup.GetLoaderStatus();
                 Console.WriteLine("Loader finished, printing XEditLib output");
                 Console.WriteLine(Messages.GetMessages());

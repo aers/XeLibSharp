@@ -43,8 +43,11 @@ namespace XeLib
 
         public override Boolean Equals(Object obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
+            if (obj is null)
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+
             return obj.GetType() == GetType() && Equals((Handle) obj);
         }
 
